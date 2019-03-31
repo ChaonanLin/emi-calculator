@@ -2,32 +2,154 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-half {
+  width: 49%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.divider {
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 49%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.inputContainer {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.inputLabel {
+  width: 50%;
+  font-size: 14px;
+  font-family: "Barlow-Medium";
+  margin: 6px 0;
+  text-align: left;
+}
+
+.inputFrame {
+  width: 40%;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #dae2e5;
+  border-radius: 20px;
+}
+
+.inputFrame:focus {
+  outline: none;
+}
+
+.Slider {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.outputContainer {
+  width: 100%;
+  padding: 0px 10px 0px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.outputLabel {
+  width: 60%;
+  color: #607580;
+  font-size: 12px;
+  font-family: "Barlow-Medium";
+  text-align: left;
+}
+
+.outputValue {
+  width: 40%;
+  font-size: 12px;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* donut chart csss */
+
+.donut-chart {
+  width: 100%;
+  padding: 0 30px;
+  margin: auto;
+}
+
+.donutchart-track {
+  fill: transparent;
+  stroke: #dae2e5;
+  stroke-width: 26;
+}
+.donutchart-indicator {
+  fill: transparent;
+  stroke: #3f51b5;
+  stroke-width: 26;
+  stroke-dasharray: 0 10000;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.donutchart {
+  margin: 0 auto;
+  border-radius: 50%;
+  display: block;
+}
+
+.donutchart-text {
+  font-family: "Roboto";
+  fill: #607580;
+  display: block;
+}
+.donutchart-text-val {
+  font-size: 22px;
+}
+.donutchart-text-label {
+  font-size: 14px;
+}
+
+body {
+  padding: 40px;
+  font-family: "Roboto";
+  text-align: center;
+}
+
+input {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 154px;
+}
+
+/* for mobile */
+@media only screen and (max-width: 500px) {
+  .container-half {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .divider {
+    display: none;
+  }
+
+  .outputContainer {
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
   }
 }

@@ -5,14 +5,10 @@ import React, { Component } from "react";
 import ".././App.css";
 
 class DonutChart extends Component {
-  state = {
-    donutval: 55
-  };
 
   render() {
     const defaultProps = {
       percentage: this.props.percentage,
-      valuelabel: "Completed",
       size: 180,
       strokewidth: 20
     };
